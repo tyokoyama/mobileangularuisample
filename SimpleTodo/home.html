@@ -1,0 +1,25 @@
+<div>
+	<div class="scrollable">
+		<div class="scrollable-content">
+			<form>
+				<div bs-panel title="Simple Todo">
+			       <input
+			        bs-form-control
+			        ng-model="home.todo"
+			        type="text"
+			        label="Todo"
+			        label-class="col-xs-3 col-sm-2 col-lg-1"
+			        class="col-xs-9 col-sm-10 col-lg-11"
+			        placeholder="Todoを入力してください。"
+			       />
+			       <input type="button" class="btn btn-primary" value="追加" ng-click="home.addTodo()" />
+				</div>
+		    </form>
+			<div class="list-group">
+				<p ng-repeat="t in home.todolist" class="list-group-item">
+					{{t}}
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
